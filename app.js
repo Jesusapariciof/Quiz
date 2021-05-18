@@ -203,12 +203,13 @@ function startQuiz(){
 }
 
 function form(){
-    formBox.querySelector('.contestadas').innerHTML = attempt;
-    formBox.querySelector('.aciertos').innerHTML =  correctAnswers;
-    formBox.querySelector('.fallos').innerHTML = attempt - correctAnswers;
-    const percentage = (correctAnswers/quiz.length)*100
-    formBox.querySelector('.porcentaje').innerHTML = percentage.toFixed(2) + '%';
-    formBox.querySelector('.puntuacion').innerHTML = correctAnswers + ' / ' + quiz.length;
+    // formBox.querySelector('.contestadas').innerHTML = attempt;
+    document.querySelector('.contestadas').value = 'hola';
+    // formBox.querySelector('.aciertos').innerHTML =  correctAnswers;
+    // formBox.querySelector('.fallos').innerHTML = attempt - correctAnswers;
+    // const percentage = (correctAnswers/quiz.length)*100
+    // formBox.querySelector('.porcentaje').innerHTML = percentage.toFixed(2) + '%';
+    // formBox.querySelector('.puntuacion').innerHTML = correctAnswers + ' / ' + quiz.length;
 
 }
 
@@ -216,4 +217,5 @@ function form(){
 window.onload = function(){
     homeBox.querySelector('.total-questions').innerHTML = quiz.length
 }
+
 
