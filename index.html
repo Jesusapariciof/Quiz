@@ -7,10 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    
     <div class="home-box custom-box ">
+            <div class="logo"></div>
         <h3>Instruction: </h3>
         <p>Total number of questions: <span class="total-questions"></span> </p>
+        <p>Aquí te ofrecemos tres pruebas de nivel que te darán una idea aproximada del nivel de inglés que tienes.</p> <br>
+        <p>Al finalizar el test, podrás mandar los datos a la academia.</p>
+        <h3>Good Luck!</h3>
         <button type="button" class="btn" onclick="startQuiz()">Start</button>
     </div>
     <div class="quiz-box custom-box hide ">
@@ -67,32 +70,44 @@
         </table>
         <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
         <button type="button" class="btn" onclick="goToHome()">Go To Home</button>
-        <button type="button" class="btn" onclick="goToForm()">Enviar datos</button>
+        <button type="button" class="btn" onclick="goToForm()">Send to Liberty</button>
        
     </div>
     
     <div class="form-box custom-box hide">
-    <form name="contact" method="POST" data-netlify="true">
+    <form name="contact" method="POST" data-netlify="true" >
+        <div class="logo"></div>
+       <div class="formulario">
+        <div class="formu">
         <p>
-          <label>Your Name: <input type="text" name="name" required /></label>   
+          <label> <p class="name">Your Name: </p> <input type="text" name="name" placeholder="Write your name" required /></label>   
         </p>
+    </div>
+    <div class="formu">
         <p>
-            <label> Attempt <input type="number" name="attempt" class="contestadas" value="contestadas" readonly > <span name="attempt" class="contestadas"></span></label>
-
+            <label> <p class="name" >Attempt</p>  <input type="number" name="attempt" class="contestadas" value="contestadas" readonly > <span name="attempt" class="contestadas"></span></label>
         </p>
+    </div>
+    <div class="formu">
         <p>
-            <label> Correct <input type="number" name="correct" class="aciertos" value="aciertos" readonly > <span name="attempt" class="aciertos"></span></label>
+            <label> <p class="name" >Correct</p>  <input type="number" name="correct" class="aciertos" value="aciertos" readonly > <span name="attempt" class="aciertos"></span></label>
         </p>
+    </div>
+        <div class="formu">
         <p>
-            <label> Wrong <input type="number" name="wrong" class="fallos" value="fallos"  readonly> <span name="attempt" class="fallos"></span></label>
+            <label> <p class="name" >Wrong</p>  <input type="number" name="wrong" class="fallos" value="fallos"  readonly> <span name="attempt" class="fallos"></span></label>
         </p>
+    </div>
+        <div class="formu">
         <p>
-            <label> Percentage <input type="text" name="percentage" class="porcentaje" value="porcentaje" readonly > <span name="attempt" class="porcentaje"></span></label>
+            <label> <p class="name" >Percentage</p>  <input type="text" name="percentage" class="porcentaje" value="porcentaje" readonly > <span name="attempt" class="porcentaje"></span></label>
         </p>
+    </div>
+        <div class="formu">
         <p>
-            <label> Puntuación <input type="text" name="Score" class="puntuacion" value="puntuacion"  readonly> <span name="attempt" class="puntuacion"></span></label>
+            <label> <p class="name" >Score</p>  <input type="text" name="Score" class="puntuacion" value="puntuacion"  readonly> <span name="attempt" class="puntuacion"></span></label>
         </p>
-        
+    </div>
         
         
         
@@ -106,6 +121,7 @@
         <p>
           <button type="submit" class="btn">Send</button>
         </p>
+    </div> 
       </form>
     </div>
 

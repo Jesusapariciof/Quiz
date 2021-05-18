@@ -3,34 +3,50 @@
 //Array of Objets
 const quiz = [
 {
-    q: 'Which month comes right before June?',
-    options:['May', 'September', 'July', 'August'],
-    answer: 0
-},
-{
-    q: 'What color is a banana',
-    options:['Red', 'Yellow', 'White', 'Blue'],
-    answer: 1
-},
-{
-    q: '3 + 4 = 7?',
-    options:['True', 'False'],
-    answer: 0
-},
-{
-    q: 'What time of day do we have breackfast',
-    options:['In the afternoon', 'In the evening', 'In the morning', ],
+    q: "____'s your name? Thomas",
+    options:['How', 'Who', 'What', 'Where'],
     answer: 2
 },
 {
-    q: 'What is 2 + 6?',
-    options:['99', '56', '54', '8'],
+    q: 'This is Lucy and her brother, Dan. ____ my friends',
+    options:["We're", "I'm", "You're", "They're"],
     answer: 3
 },
 {
-    q: 'What is 2 + 6?',
-    options:['99', '56', '54', '8'],
+    q: "____? I'm from Italy.",
+    options:['Where are you from?', 'Where you are from?', 'Where from you are?','From where you are?'],
+    answer: 0
+},
+{
+    q: "I'm from Milan. ____ is in Italy." ,
+    options:['They', 'It', 'He','She' ],
+    answer: 1
+},
+{
+    q: "My name's Pete and this is Sylvia. ____ doctors from France.",
+    options:["I'm", "We're", "She's", "They're"],
+    answer: 1
+},
+{
+    q: "Sorry, ____ Paul. My name's Eric.",
+    options:["I isn't", "I is not", "I aren't", "I'm not"],
     answer: 3
 },
+{
+    q: "____? No, he isn't.",
+    options:["Are they teachers?", "Are you from Italy?", "Is Mr Banning a teacher?", "Is this your phone?"],
+    answer: 2
+},
+{
+    q: "What is ____?",
+    options:["job Mary", "Mary job", "Mary's job", "job's Mary"],
+    answer: 2
+},
+{
+    q: "____ are the keys? On the table.",
+    options:["What", "When", "Where", "Who"],
+    answer: 2
+},
+
 
 ]
