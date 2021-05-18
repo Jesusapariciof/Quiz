@@ -21,6 +21,17 @@ body{
     margin:40px auto ;
     padding: 30px;
     border-radius: 10px ;
+    animation: fadeInRight 1s ease;
+}
+@keyframes fadeInRight{
+    0%{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 .custom-box::before, 
 .custom-box::after{
@@ -101,7 +112,7 @@ body{
 }
 .quiz-box .option-container .option{
 background-color: #cccccc;
-padding: 15;
+padding:13px 15px;
 font-size: 16px;
 line-height: 22px;
 color: #000000;
@@ -109,6 +120,62 @@ border-radius: 5px;
 margin-bottom: 10px;
 cursor: pointer;
 text-transform: capitalize;
+opacity: 0;
+animation: fadeIn 0.3s ease forwards;
+position: relative;
+overflow: hidden;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.quiz-box .option-container .option.correct::before{
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: green;
+z-index: -1;
+animation: slideInLeft .5s ease forwards;
+
+}
+@keyframes slideInLeft{
+    0%{
+        transform:translateX(-100%) ;
+    }
+    100%{
+        transform:translateX(0%) ;
+    }
+}
+.quiz-box .option-container .option.already-answered{
+    pointer-events: none;
+}
+
+.quiz-box .option-container .option.wrong::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+    
+    }
+    .quiz-box .option-container .option.wrong{
+        color: #ffffff;
+        }
+
+.quiz-box .option-container .option.correct{
+color: #ffffff;
 }
 /* .quiz-box .question-container{
 
@@ -127,6 +194,22 @@ text-transform: capitalize;
     border-radius: 50%;
     margin-right: 3px;
     margin-top: 10px;
+}
+.quiz-box .answers-indicator div.correct{
+background-color: green;
+background-image: url("/img/correct.png");
+background-size: 50%;
+background-repeat: no-repeat;
+background-position: center;
+
+}
+.quiz-box .answers-indicator div.wrong{
+    background-color: red;
+    background-image: url("/img/wrong.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
 .result-box{
@@ -158,4 +241,13 @@ text-transform: capitalize;
 .result-box .btn{
     margin-right: 20px;
 
+}
+
+@media(max-width: 767px){
+    .result-box .btn{
+        margin-bottom: 15px;
+    }
+    body{
+        padding: 15px;
+    }
 }
