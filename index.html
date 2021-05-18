@@ -37,7 +37,6 @@
             <div></div> -->
         </div>
     </div>    
-    <form name="contact" method="POST" data-netlify="true">
     <div class="result-box custom-box hide">
         <h1>Quiz Result</h1>
         <table>
@@ -68,9 +67,28 @@
         </table>
         <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
         <button type="button" class="btn" onclick="goToHome()">Go To Home</button>
-        <button type="submit">Enviar</button>
+        <button type="button" class="btn" onclick="goToForm()">Enviar datos</button>
+       
     </div>
-</form>
+    
+    <div class="form-box custom-box hide">
+    <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>Your Name: <input type="text" name="name" required /></label>   
+        </p>
+        
+        <p> Attempt:  <span class="contestadas"></span> </p>
+        <p> Correct:  <span class="aciertos"></span> </p>
+        <p> Wrong:  <span class="fallos"></span> </p>
+        <p> Percentage:  <span class="porcentaje"></span> </p>
+        <p> Your Total Score:  <span class="puntuacion"></span> </p>
+        
+       
+        <p>
+          <button type="submit" class="btn">Send</button>
+        </p>
+      </form>
+    </div>
 
     <script src="/question.js"></script>
     <script src="/app.js"></script>

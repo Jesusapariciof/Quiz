@@ -7,7 +7,7 @@ const answersIndicatorContainer = document.querySelector('.answers-indicator');
 const homeBox = document.querySelector('.home-box');
 const quizBox = document.querySelector('.quiz-box');
 const resultBox = document.querySelector('.result-box');
-
+const formBox = document.querySelector('.form-box')
 
 let questionCounter = 0;
 let currentQuestion;
@@ -141,7 +141,7 @@ function quizOver(){
 
     resultBox.classList.remove('hide');
     quizResult()
-
+    form()
 }
 
 function quizResult(){
@@ -181,6 +181,13 @@ function goToHome(){
     resetQuiz()
 }
 
+function goToForm(){
+    //hide the resultBox
+    resultBox.classList.add('hide');
+    //show formBox
+    formBox.classList.remove('hide');
+}
+
 function startQuiz(){
 
     //hide home box
@@ -193,6 +200,16 @@ function startQuiz(){
     setAvailaberQuestions()
     getNewQuestion()
     answersIndicator()
+}
+
+function form(){
+    formBox.querySelector('.contestadas').innerHTML = attempt;
+    formBox.querySelector('.aciertos').innerHTML =  correctAnswers;
+    formBox.querySelector('.fallos').innerHTML = attempt - correctAnswers;
+    const percentage = (correctAnswers/quiz.length)*100
+    formBox.querySelector('.porcentaje').innerHTML = percentage.toFixed(2) + '%';
+    formBox.querySelector('.puntuacion').innerHTML = correctAnswers + ' / ' + quiz.length;
+
 }
 
 
