@@ -204,13 +204,17 @@ function startQuiz(){
 
 function form(){
     // formBox.querySelector('.contestadas').innerHTML = attempt;
-    document.querySelector('.contestadas').value = attempt;
     // formBox.querySelector('.aciertos').innerHTML =  correctAnswers;
     // formBox.querySelector('.fallos').innerHTML = attempt - correctAnswers;
-    // const percentage = (correctAnswers/quiz.length)*100
+     const percentage = (correctAnswers/quiz.length)*100
     // formBox.querySelector('.porcentaje').innerHTML = percentage.toFixed(2) + '%';
     // formBox.querySelector('.puntuacion').innerHTML = correctAnswers + ' / ' + quiz.length;
-
+    
+    document.querySelector('.contestadas').value = attempt;
+    document.querySelector('.aciertos').value = correctAnswers;
+    document.querySelector('.fallos').value = attempt - correctAnswers;
+    document.querySelector('.porcentaje').value = percentage.toFixed(2) + '%';
+    document.querySelector('.puntuacion').value = correctAnswers + ' / ' + quiz.length;
 }
 
 
