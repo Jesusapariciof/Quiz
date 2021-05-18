@@ -204,7 +204,7 @@ function startQuiz(){
 
 function form(){
     // formBox.querySelector('.contestadas').innerHTML = attempt;
-    document.querySelector('.contestadas').value = parseInt(attempt);
+    document.querySelector('.contestadas').value = attempt;
     // formBox.querySelector('.aciertos').innerHTML =  correctAnswers;
     // formBox.querySelector('.fallos').innerHTML = attempt - correctAnswers;
     // const percentage = (correctAnswers/quiz.length)*100
