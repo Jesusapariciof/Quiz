@@ -251,3 +251,9 @@ background-position: center;
         padding: 15px;
     }
 }
+
+.input{
+    /* border: none;
+    background-color: white; */
+    display: none;
+}
