@@ -225,12 +225,12 @@ function form(){
     document.querySelector('.fallos').value = attempt - correctAnswers;
     document.querySelector('.porcentaje').value = percentage.toFixed(2) + '%';
     document.querySelector('.puntuacion').value = correctAnswers + ' / ' + quiz.length;
-    if(correctAnswers <= 10){
+    if(correctAnswers <= 13){
         document.querySelector('.level').value  = 'Intermedio'
-    } else if( correctAnswers >= 11 && correctAnswers <= 17){
-        document.querySelector('.level').value  = 'First 1'
+    } else if( correctAnswers >= 14 && correctAnswers <= 38){
+        document.querySelector('.level').value  = 'FCE 1'
     }else{
-        document.querySelector('.level').value  = 'First 2'
+        document.querySelector('.level').value  = 'FCE 2'
     }
 }
 
