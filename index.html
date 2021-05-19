@@ -67,10 +67,35 @@
                 <td>Your Total Score</td>
                <td> <span class="total-score"></span> </td>
             </tr>
+            <tr>
+                <td>Level</td>
+               <td> <span class="total-level"></span> </td>
+            </tr>
         </table>
         <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
         <button type="button" class="btn" onclick="goToHome()">Go To Home</button>
         <button type="button" class="btn" onclick="goToForm()">Send to Liberty</button>
+
+        <div class="tabla-informacion intermedio, firts 1, first 2">
+            <table>
+                <tr>
+                    <th>Nivel</th>
+                    <th>Puntuación</th>
+                  </tr>
+                  <tr>
+                    <td>Intermedio</td>
+                    <td> 0 / 10</td>
+                  </tr>
+                  <tr>
+                    <td>First 1</td>
+                    <td>11 / 17</td>
+                  </tr>
+                  <tr>
+                    <td>First 2</td>
+                    <td>18 /25</td>
+                  </tr>
+            </table>
+        </div>
        
     </div>
     
@@ -106,6 +131,9 @@
         <div class="formu">
         <p>
             <label> <p class="name" >Score</p>  <input type="text" name="Score" class="puntuacion" value="puntuacion"  readonly> <span name="attempt" class="puntuacion"></span></label>
+        </p>
+        <p>
+            <label> <p class="name" >Level</p>  <input type="text" name="level" class="level" value="level"  readonly> <span name="attempt" class="level"></span></label>
         </p>
     </div>
         

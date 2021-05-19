@@ -152,8 +152,18 @@ function quizResult(){
     const percentage = (correctAnswers/quiz.length)*100
     resultBox.querySelector('.total-percentage').innerHTML = percentage.toFixed(2) + '%';
     resultBox.querySelector('.total-score').innerHTML = correctAnswers + ' / ' + quiz.length;
+    
 
-}
+    if(correctAnswers <= 10){
+        resultBox.querySelector('.total-level').innerHTML = 'Intermedio'
+    } else if( correctAnswers >= 11 && correctAnswers <= 17){
+        resultBox.querySelector('.total-level').innerHTML = 'First 1'
+    }else{
+        resultBox.querySelector('.total-level').innerHTML = 'First 2'
+    }
+
+    }
+
 
 function resetQuiz(){
     questionCounter = 0;
@@ -215,6 +225,13 @@ function form(){
     document.querySelector('.fallos').value = attempt - correctAnswers;
     document.querySelector('.porcentaje').value = percentage.toFixed(2) + '%';
     document.querySelector('.puntuacion').value = correctAnswers + ' / ' + quiz.length;
+    if(correctAnswers <= 10){
+        document.querySelector('.level').value  = 'Intermedio'
+    } else if( correctAnswers >= 11 && correctAnswers <= 17){
+        document.querySelector('.level').value  = 'First 1'
+    }else{
+        document.querySelector('.level').value  = 'First 2'
+    }
 }
 
 
