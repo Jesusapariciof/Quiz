@@ -156,7 +156,7 @@ function quizResult(){
 
     if(correctAnswers <= 10){
         resultBox.querySelector('.total-level').innerHTML = 'Intermedio'
-    } else if( correctAnswers >= 11 && correctAnswers <= 17){
+    } else if( correctAnswers >= 11 && correctAnswers <= 37){
         resultBox.querySelector('.total-level').innerHTML = 'First 1'
     }else{
         resultBox.querySelector('.total-level').innerHTML = 'First 2'
