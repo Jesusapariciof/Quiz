@@ -4,7 +4,6 @@ body{
     margin: 0;
     font-size: 16px;
      background-color:#009688 ; 
-   
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
@@ -127,7 +126,7 @@ color: #000000;
 border-radius: 5px;
 margin-bottom: 10px;
 cursor: pointer;
-text-transform: capitalize;
+/* text-transform: capitalize; */
 opacity: 0;
 animation: fadeIn 0.3s ease forwards;
 position: relative;
@@ -142,14 +141,14 @@ overflow: hidden;
     }
 }
 
-.quiz-box .option-container .option.correct::before{
+.quiz-box .option-container .option.select::before{
 content: '';
 position: absolute;
 left: 0;
 top: 0;
 height: 100%;
 width: 100%;
-background-color: green;
+background-color:#009688;
 z-index: -1;
 animation: slideInLeft .5s ease forwards;
 
@@ -164,9 +163,11 @@ animation: slideInLeft .5s ease forwards;
 }
 .quiz-box .option-container .option.already-answered{
     pointer-events: none;
+    
 }
 
-.quiz-box .option-container .option.wrong::before{
+
+/* .quiz-box .option-container .option.wrong::before{
     content: '';
     position: absolute;
     left: 0;
@@ -180,11 +181,11 @@ animation: slideInLeft .5s ease forwards;
     }
     .quiz-box .option-container .option.wrong{
         color: #ffffff;
-        }
+        } */
 
-.quiz-box .option-container .option.correct{
+/* .quiz-box .option-container .option.correct{
 color: #ffffff;
-}
+} */
 /* .quiz-box .question-container{
 
 } */
@@ -194,7 +195,7 @@ color: #ffffff;
 .quiz-box .answers-indicator{
     border-top: 1px solid #cccccc;
 }
-.quiz-box .answers-indicator div{
+/* .quiz-box .answers-indicator div{
     height: 40px;
     width: 40px;
     display: inline-block;
@@ -202,23 +203,23 @@ color: #ffffff;
     border-radius: 50%;
     margin-right: 3px;
     margin-top: 10px;
-}
-.quiz-box .answers-indicator div.correct{
+} */
+/* .quiz-box .answers-indicator div.correct{
 background-color: green;
 background-image: url("/img/correct.png");
 background-size: 50%;
 background-repeat: no-repeat;
 background-position: center;
 
-}
-.quiz-box .answers-indicator div.wrong{
+} */
+/* .quiz-box .answers-indicator div.wrong{
     background-color: red;
     background-image: url("/img/wrong.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
     
-}
+} */
 
 .result-box{
     text-align: center;

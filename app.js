@@ -1,4 +1,4 @@
-console.log(quiz)
+console.log(quiz[0].options[0].toLowerCase())
 
 const questionNumber= document.querySelector('.question-number');
 const questionText = document.querySelector('.question-text');
@@ -48,6 +48,8 @@ function getNewQuestion(){
     //set options
     //get the length of options
     const optionLen = currentQuestion.options.length;
+    
+   
 
     //Push option into availableOptions Array
     for(let i = 0; i < optionLen; i++){
@@ -61,6 +63,7 @@ function getNewQuestion(){
         const optionIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)]
         //Get the position of optionIndex from the avalibale questions
         const index2 = availableOptions.indexOf(optionIndex);
+        console.log(index2)
         //remove the optionIndex from the avalibale questions, so that the option does not repeat
         availableOptions.splice(index2,1);
 
@@ -74,27 +77,28 @@ function getNewQuestion(){
         option.setAttribute('onclick', 'getResult(this)')
     }
     questionCounter++
-    console.log(questionIndex)
+    console.log(currentQuestion.answer)
 }
 
 //get the result of current attempt question
 function getResult(element){
     const id = parseInt(element.id)
-    if(id === currentQuestion.answer){
-        element.classList.add('correct');
+    if(id === currentQuestion.answer ){
+        element.classList.add('select');
         updateAnswerIndicator('correct')
         correctAnswers++;
-    }else{
-        element.classList.add('wrong')
+    }
+    else{
+        element.classList.add('select')
         updateAnswerIndicator('wrong')
 
 
-        const optionLen = optionContainer.children.length;
-        for(let i =0; i<optionLen; i++){
-            if(parseInt(optionContainer.children[i].id)=== currentQuestion.answer){
-                optionContainer.children[i].classList.add('correct');
-            }
-        }
+        // const optionLen = optionContainer.children.length;
+        // for(let i =0; i<optionLen; i++){
+        //     if(parseInt(optionContainer.children[i].id)=== currentQuestion.answer){
+        //         optionContainer.children[i].classList.add('correct');
+        //     }
+        // }
     }
     attempt++;
     unclickableOptions()
