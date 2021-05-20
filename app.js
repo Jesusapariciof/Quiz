@@ -142,10 +142,10 @@ function quizOver(){
     quizBox.classList.add('hide');
 
     //show result box
-
     resultBox.classList.remove('hide');
     quizResult()
     form()
+    // overDisabled()
 }
 
 function quizResult(){
@@ -184,11 +184,15 @@ function tryAgainQuiz(){
 
     resetQuiz()
     startQuiz()
+    
 }
 
 function goToHome(){
     //hide resultBox
     resultBox.classList.add('hide');
+
+    //hide over
+    over.classList.add('hide');
 
     //show homeBox
     homeBox.classList.remove('hide');
@@ -213,6 +217,8 @@ function startQuiz(){
 
     setAvailaberQuestions()
     getNewQuestion()
+    resetTime()
+    startTimer(count)
     answersIndicator()
 }
 
@@ -236,6 +242,7 @@ function form(){
     }else{
         document.querySelector('.level').value  = 'FCE 2'
     }
+    
 }
 
 
@@ -243,4 +250,61 @@ window.onload = function(){
     homeBox.querySelector('.total-questions').innerHTML = quiz.length
 }
 
+const timeCount = document.querySelector('.time')
+let counter;
+let count = 2500;
 
+function startTimer(time){
+counter = setInterval(timer, 1000);
+function timer(){
+    timeCount.textContent = time + 's';
+    time --;
+    if(questionCounter === quiz.length){
+        clearInterval(counter)
+    }
+    if(time === 0){
+        gameOver()
+        resetTime()
+    }
+}
+
+}
+
+function resetTime(){
+    clearInterval(counter)
+}
+
+//Show gameOver when time is over
+const over = document.querySelector('.gameOver')
+function gameOver(){
+    
+    //hide home box
+    quizBox.classList.add('hide');
+
+    //show quizBox
+
+    over.classList.remove('hide');
+
+}
+
+
+
+// convertir segundos a minutos
+
+// function secondsToString(seconds) {
+//     var hour = Math.floor(seconds / 3600);
+//     hour = (hour < 10)? '0' + hour : hour;
+//     var minute = Math.floor((seconds / 60) % 60);
+//     minute = (minute < 10)? '0' + minute : minute;
+//     var second = seconds % 60;
+//     second = (second < 10)? '0' + second : second;
+//     return hour + ':' + minute + ':' + second;
+// }
+
+//   const minutos = secondsToString(count)
+
+//   console.log(minutos)
+
+  
+
+   

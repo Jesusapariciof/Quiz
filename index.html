@@ -16,8 +16,14 @@
         <h3>Good Luck!</h3>
         <button type="button" class="btn" onclick="startQuiz()">Start</button>
     </div>
+
     <div class="quiz-box custom-box hide ">
+        <div class="clock">
+            <div class="text-time"><h3>Time</h3> </div> 
+            <div class="time"> </div>
+        </div>
         <div class="question-number">
+        
             <!-- Question 1 of 5 -->
         </div>
         <div class="question-text">
@@ -154,6 +160,13 @@
     </div> 
       </form>
     </div>
+
+    <!-- GameOver -->
+    <div class="home-box custom-box gameOver hide">
+        <div class="logo"></div>
+    <h3>Tiempo Terminado. Pulsa Start para comenzar de nuevo. </h3>
+    <button type="button" class="btn" onclick="goToHome()">Start</button>
+</div>
 
     <script src="/question.js"></script>
     <script src="/app.js"></script>

@@ -282,3 +282,22 @@ input{
     background-image: url('/img/logo2.png');
     border: 1px solid red;
 }
+
+.over{
+    background-color: #009688;
+}
+.clock{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text-time{
+    margin-right: 10px;
+    color: #009688;
+}
+
+.time{
+    color: #009688;
+    font-weight: bold;
+    font-size: 18px;
+}
