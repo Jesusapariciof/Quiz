@@ -252,7 +252,7 @@ window.onload = function(){
 
 const timeCount = document.querySelector('.time')
 let counter;
-let count = 2500;
+let count = 60;
 
 function startTimer(time){
 counter = setInterval(timer, 1000);
