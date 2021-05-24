@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/quiz/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="home-box custom-box ">
+            <div class="logo"></div>
+        <h3>Instruction: </h3>
+        <p>Total number of questions: <span class="total-questions"></span> </p>
+        <p>Aquí te ofrecemos una prueba de nivel que te dará una idea aproximada del nivel de inglés que tienes.</p> <br>
+        <p>Al finalizar el test, podrás mandar los datos a la academia.</p>
+        <h3>Good Luck!</h3>
+        <button type="button" class="btn" onclick="startQuiz()">Start</button>
+    </div>
+
+    <div class="quiz-box custom-box hide ">
+        <div class="clock">
+            <div class="text-time"><h3>Time</h3> </div> 
+            <div class="time"> </div>
+        </div>
+        <div class="question-number">
+        
+            <!-- Question 1 of 5 -->
+        </div>
+        <div class="question-text">
+            <!-- Which month comes right before june? -->
+        </div>
+        <div class="option-container">
+            <!-- <div class="option">July</div>
+            <div class="option">March</div>
+            <div class="option">September</div>
+            <div class="option">May</div> -->
+        </div>
+        <div class="next-question-btn">
+            <button type="button" class="btn" onclick="next()">Next</button>
+        </div>
+        <div class="answers-indicator">
+            <!-- <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div> -->
+        </div>
+    </div>    
+    <div class="result-box custom-box hide">
+        <h1>Quiz Result</h1>
+        <table>
+            <tr>
+                <td>Total Question</td>
+               <td> <span class="total-question"></span> </td>
+            </tr>
+            <tr>
+                <td>Attempt</td>
+               <td> <span class="total-attempt"></span> </td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+               <td> <span class="total-correct"></span> </td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+               <td> <span class="total-wrong"></span> </td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+               <td> <span class="total-percentage"></span> </td>
+            </tr>
+            <tr>
+                <td>Your Total Score</td>
+               <td> <span class="total-score"></span> </td>
+            </tr>
+            <tr>
+                <td>Level</td>
+               <td> <span class="total-level"></span> </td>
+            </tr>
+        </table>
+        <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
+        <button type="button" class="btn" onclick="goToHome()">Go To Home</button>
+        <button type="button" class="btn" onclick="goToForm()">Send to Liberty</button>
+
+        <div class="tabla-informacion intermedio, firts 1, first 2">
+            <table>
+                <tr>
+                    <th>Level</th>
+                    <th>Score</th>
+                  </tr>
+                  <tr>
+                    <td>Intermediate</td>
+                    <td> 0 / 13</td>
+                  </tr>
+                  <tr>
+                    <td>First 1</td>
+                    <td>14 / 38</td>
+                  </tr>
+                  <tr>
+                    <td>First 2</td>
+                    <td>39 /50</td>
+                  </tr>
+            </table>
+        </div>
+       
+    </div>
+    
+    <div class="form-box custom-box hide">
+    <form name="contact" method="POST" data-netlify="true" >
+        <div class="logo"></div>
+       <div class="formulario">
+        <div class="formu">
+        <p>
+          <label> <p class="name">Your Name: </p> <input type="text" name="name" placeholder="Write your name" required /></label>   
+        </p>
+    </div>
+    <div class="formu">
+        <p>
+            <label> <p class="name" >Attempt</p>  <input type="number" name="attempt" class="contestadas" value="contestadas" readonly > <span name="attempt" class="contestadas"></span></label>
+        </p>
+    </div>
+    <div class="formu">
+        <p>
+            <label> <p class="name" >Correct</p>  <input type="number" name="correct" class="aciertos" value="aciertos" readonly > <span name="attempt" class="aciertos"></span></label>
+        </p>
+    </div>
+        <div class="formu">
+        <p>
+            <label> <p class="name" >Wrong</p>  <input type="number" name="wrong" class="fallos" value="fallos"  readonly> <span name="attempt" class="fallos"></span></label>
+        </p>
+    </div>
+        <div class="formu">
+        <p>
+            <label> <p class="name" >Percentage</p>  <input type="text" name="percentage" class="porcentaje" value="porcentaje" readonly > <span name="attempt" class="porcentaje"></span></label>
+        </p>
+    </div>
+        <div class="formu">
+        <p>
+            <label> <p class="name" >Score</p>  <input type="text" name="Score" class="puntuacion" value="puntuacion"  readonly> <span name="attempt" class="puntuacion"></span></label>
+        </p>
+    </div>
+        <div class="formu">
+        <p>
+            <label> <p class="name" >Level</p>  <input type="text" name="level" class="level" value="level"  readonly> <span name="attempt" class="level"></span></label>
+        </p>
+    </div>
+        
+        
+        
+        <!-- <p> Attempt:  <span name="attempt" class="contestadas"></span> </p> -->
+        <!-- <p> Correct:  <span class="aciertos"></span> </p>
+        <p> Wrong:  <span class="fallos"></span> </p>
+        <p> Percentage:  <span class="porcentaje"></span> </p>
+        <p> Your Total Score:  <span class="puntuacion"></span> </p> -->
+        
+       
+        <p>
+          <button type="submit" class="btn">Send</button>
+        </p>
+    </div> 
+      </form>
+    </div>
+
+    <!-- GameOver -->
+    <div class="home-box custom-box gameOver hide">
+        <div class="logo"></div>
+    <h3>Tiempo Terminado. Pulsa Start para comenzar de nuevo. </h3>
+    <button type="button" class="btn" onclick="goToHome()">Start</button>
+</div>
+
+    <script src="/quiz/question.js"></script>
+    <script src="/quiz/app.js"></script>
+</body>
+</html>
