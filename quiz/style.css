@@ -3,7 +3,7 @@
 body{
     margin: 0;
     font-size: 16px;
-     background-color:#009688 ; 
+     background-color:#776eac ; 
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
@@ -80,7 +80,7 @@ body{
 
 .btn{
     padding: 15px 45px;
-    background-color: #009688;
+    background-color: #776eac;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -103,7 +103,7 @@ body{
 
 .quiz-box .question-number{
     font-size: 18px;
-    color: #009688;
+    color: #776eac;
     font-weight: 600;
     border-bottom: 1px solid #cccccc;
     padding-bottom: 10px;
@@ -148,7 +148,7 @@ left: 0;
 top: 0;
 height: 100%;
 width: 100%;
-background-color:#009688;
+background-color:#776eac;
 z-index: -1;
 animation: slideInLeft .5s ease forwards;
 
@@ -231,7 +231,7 @@ background-position: center;
 .result-box h1{
     font-size: 36px;
     line-height: 42px;
-    color: #009688;
+    color: #776eac;
 }
 .result-box table{
     width: 100%;
@@ -284,7 +284,7 @@ input{
 }
 
 .over{
-    background-color: #009688;
+    background-color: #776eac;
 }
 .clock{
     display: flex;
@@ -293,11 +293,11 @@ input{
 
 .text-time{
     margin-right: 10px;
-    color: #009688;
+    color: #776eac;
 }
 
 .time{
-    color: #009688;
+    color: #776eac;
     font-weight: bold;
     font-size: 18px;
 }
