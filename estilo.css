@@ -42,7 +42,7 @@ a.nav-link:hover{
 }
 
 .twitter{
-    border: 1px solid #dfdfdf;
+    /* border: 1px solid #dfdfdf; */
     width: 25%;
     
 }
@@ -100,13 +100,36 @@ ul.menu{
     justify-content: space-around;
     
 }
+a.enlace-nivel{
+    margin-bottom: 50px;
+}
 .nivel{
-    max-width: 297px;
+    width: 297px;
     height: 200px;
     margin-top: 20px;
     
 }
 
+
+
+/* Footer */
+
+.row.mt-3, .text-center, .fondo-footer{
+    background-color: #262626;
+    color: #ffffff;
+}
+.col-md-4.col-lg-3.col-xl-3.mx-auto.mb-md-0.mb-4, .col-md-3.col-lg-4.col-xl-3.mx-auto.mb-4, .col-md-3.col-lg-2.col-xl-2.mx-auto.mb-4 {
+    padding-top: 30px;
+}
+
+.footer-text{
+    color: #C73833;
+}
+
+
+
+
+/* Mediaqueries */
 @media(max-width:768px){
     body{
         width: 100%;
