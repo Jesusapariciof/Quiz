@@ -252,12 +252,15 @@ window.onload = function(){
 
 const timeCount = document.querySelector('.time')
 let counter;
-let count = 1800;
+let count = 60*30;
 
 function startTimer(time){
 counter = setInterval(timer, 1000);
 function timer(){
-    timeCount.textContent = time + 's';
+    const  minutes = parseInt(time / 60, 10);
+    const seconds = parseInt(time % 60, 10);
+
+    timeCount.textContent = minutes + ":" + seconds;
     time --;
     if(questionCounter === quiz.length){
         clearInterval(counter)

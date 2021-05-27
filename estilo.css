@@ -28,6 +28,9 @@ margin-bottom: 20px;
 }
 a.nav-link{
     color: #ffffff;
+    padding: 14px 10px 13px 10px;
+    font:700 18px/24px 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 0px rgb(0 0 0 / 20%);
     
 }
 a.nav-link:hover{
@@ -35,7 +38,11 @@ a.nav-link:hover{
     color: white;
 }
 
+.navbar-dark .navbar-nav .nav-link{
 
+
+    color: #ffffff;
+}
 .principal{
     display: flex;
     justify-content: space-between;
