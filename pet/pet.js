@@ -1,4 +1,4 @@
-console.log(quiz)
+
 
 const questionNumber= document.querySelector('.question-number');
 const questionText = document.querySelector('.question-text');
@@ -158,12 +158,10 @@ function quizResult(){
     resultBox.querySelector('.total-score').innerHTML = correctAnswers + ' / ' + quiz.length;
     
 
-    if(correctAnswers <= 10){
-        resultBox.querySelector('.total-level').innerHTML = 'Intermedio'
-    } else if( correctAnswers >= 11 && correctAnswers <= 37){
-        resultBox.querySelector('.total-level').innerHTML = 'First 1'
+    if(correctAnswers <= 38){
+        resultBox.querySelector('.total-level').innerHTML = 'Pre-Intermediate'
     }else{
-        resultBox.querySelector('.total-level').innerHTML = 'First 2'
+        resultBox.querySelector('.total-level').innerHTML = 'Intermediate (PET)'
     }
 
     }
@@ -235,12 +233,11 @@ function form(){
     document.querySelector('.fallos').value = attempt - correctAnswers;
     document.querySelector('.porcentaje').value = percentage.toFixed(2) + '%';
     document.querySelector('.puntuacion').value = correctAnswers + ' / ' + quiz.length;
-    if(correctAnswers <= 13){
-        document.querySelector('.level').value  = 'Intermedio'
-    } else if( correctAnswers >= 14 && correctAnswers <= 38){
-        document.querySelector('.level').value  = 'FCE 1'
-    }else{
-        document.querySelector('.level').value  = 'FCE 2'
+    if(correctAnswers <= 38){
+        document.querySelector('.level').value  = 'Pre-Intermediate'
+    } 
+    else{
+        document.querySelector('.level').value  = 'Intermediate (PET)'
     }
     
 }
